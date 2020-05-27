@@ -2,6 +2,7 @@ package axon_utils
 
 import (
 	context "context"
+	errors "errors"
 	io "io"
 	log "log"
 
@@ -35,6 +36,14 @@ type Cache interface {
 }
 
 var cache Cache = nil
+
+func SetCache(theCache Cache) error {
+	if cache != nil {
+		return errors.New("cache already set")
+	}
+	cache = theCache
+	return nil
+}
 
 func (s *aggregateState) GetSequenceNumber() int64 {
 	return s.sequenceNumber
