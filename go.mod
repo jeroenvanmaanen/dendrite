@@ -1,4 +1,4 @@
-module github.com/jeroenvm/dendrite
+module github.com/jeroenvanmaanen/dendrite
 
 go 1.13
 

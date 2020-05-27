@@ -6,7 +6,7 @@ buildGoModule {
   pname = "dendrite";
   version = "0.0.1";
   src = nix-gitignore.gitignoreSource [] ./.;
-  goPackagePath = "github.com/jeroenvm/dendrite";
+  goPackagePath = "github.com/jeroenvanmaanen/dendrite";
   goDeps = ./deps.nix;
-  modSha256 = "01vln0g7z7mxv4qpn1f924rkifh4xqisnwllj8xhnny8iadsg2la";
+  modSha256 = "1r332237s6lx34n53d8q136hh6x6nava4cazqy018842aphridx2";
 }

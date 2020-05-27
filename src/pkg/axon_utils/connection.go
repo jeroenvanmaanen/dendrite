@@ -4,7 +4,7 @@ import (
 	context "context"
 	fmt "fmt"
 	uuid "github.com/google/uuid"
-	axon_server "github.com/jeroenvm/dendrite/src/pkg/grpc/axon_server"
+	axon_server "github.com/jeroenvanmaanen/dendrite/src/pkg/grpc/axon_server"
 	grpc "google.golang.org/grpc"
 	grpcKeepAlive "google.golang.org/grpc/keepalive"
 	log "log"

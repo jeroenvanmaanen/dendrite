@@ -3,7 +3,7 @@ package axon_utils
 import (
 	log "log"
 
-	axon_server "github.com/jeroenvm/dendrite/src/pkg/grpc/axon_server"
+	axon_server "github.com/jeroenvanmaanen/dendrite/src/pkg/grpc/axon_server"
 )
 
 type Error struct {

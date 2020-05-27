@@ -7,7 +7,7 @@ import (
 
 	proto "github.com/golang/protobuf/proto"
 
-	axon_server "github.com/jeroenvm/dendrite/src/pkg/grpc/axon_server"
+	axon_server "github.com/jeroenvanmaanen/dendrite/src/pkg/grpc/axon_server"
 )
 
 type Event interface {
