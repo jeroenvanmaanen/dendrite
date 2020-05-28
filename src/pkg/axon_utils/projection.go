@@ -111,6 +111,7 @@ func RestoreProjection(label string, aggregateIdentifier string, createInitialPr
 	if cache != nil {
 		switch p := projection.(type) {
 		case CachedProjection:
+			log.Printf("%v Projection: Put in cache: %v: %v", label, aggregateIdentifier, lastSequenceNumber)
 			p.GetAggregateState().SetSequenceNumber(lastSequenceNumber)
 		}
 		cache.Put(aggregateIdentifier, projection)
