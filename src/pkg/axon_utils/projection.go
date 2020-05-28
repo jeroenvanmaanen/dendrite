@@ -93,6 +93,7 @@ func RestoreProjection(label string, aggregateIdentifier string, createInitialPr
 			break
 		}
 		log.Printf("%v Projection: Received event: %v", label, eventMessage)
+		lastSequenceNumber = eventMessage.AggregateSequenceNumber
 		if eventMessage.Payload != nil {
 			payloadType := eventMessage.Payload.Type
 			event := prepareUnmarshal(payloadType)
@@ -106,7 +107,6 @@ func RestoreProjection(label string, aggregateIdentifier string, createInitialPr
 			}
 			event.ApplyTo(projection)
 		}
-		lastSequenceNumber = eventMessage.AggregateSequenceNumber
 	}
 	if cache != nil {
 		switch p := projection.(type) {
