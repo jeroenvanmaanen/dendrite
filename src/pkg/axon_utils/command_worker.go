@@ -47,6 +47,11 @@ func handleCommand(stream axon_server.CommandService_OpenStreamClient, clientCon
 		commandError, e = commandDispatcher(command, stream, clientConnection)
 		if e != nil {
 			log.Printf("Command worker: Error on dispatch: %v: %v", command.Name, e)
+			commandError = &Error{
+				Code:                "FAULT",
+				Message:             "Internal error",
+				AggregateIdentifier: "CommandMessage:" + command.MessageIdentifier,
+			}
 			return e
 		}
 		if commandError == nil || commandError.Code != "" {
