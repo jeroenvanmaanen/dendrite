@@ -1,5 +1,7 @@
 # Dendrite
 
+**This project has moved to [dendrite2go/dendrite](https://github.com/dendrite2go/dendrite).**
+
 A Go library to connect to AxonServer.
 
 See [archetype-go-axon](https://github.com/jeroenvanmaanen/archetype-go-axon)
